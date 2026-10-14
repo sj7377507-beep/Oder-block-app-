@@ -4,3 +4,4 @@ pandas
 numpy
 yfinance
 neo-api-client
+pyotp
