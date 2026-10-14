@@ -3,7 +3,10 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import yfinance as yf
-
+import pyotp
+client = NeoAPI(consumer_key='46ddfba8-10b2-40dc-8afd-ee0cd878f2ed')
+totp = pyotp.TOTP('OZFVKWQESGPK6IRRH2LKDKILJU')
+client.login(password='986742', totp_pin=totp.now())
 st.set_page_config(page_title="AI Smart Trading Terminal - Order Block & SMC", layout="wide")
 
 st.markdown("""
