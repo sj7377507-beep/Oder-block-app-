@@ -1,10 +1,10 @@
 import streamlit as st
+st.set_page_config(page_title="AI Smart Trading Terminal - Order Block & SMC", layout="wide")
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import yfinance as y
 import pyotp
-st.set_page_config(page_title="AI Smart Trading Terminal - Order Block & SMC", layout="wide")
 from neo_api_client import NeoAPI
 client = NeoAPI(consumer_key='46ddfba8-10b2-40dc-8afd-ee0cd878f2ed')
 totp = pyotp.TOTP('OZFVKWQESGPK6IRRH2LKDKILJU')
