@@ -8,7 +8,7 @@ import pyotp
 from neo_api_client import NeoAPI
 client = NeoAPI(consumer_key='46ddfba8-10b2-40dc-8afd-ee0cd878f2ed')
 totp = pyotp.TOTP('OZFVKWQESGPK6IRRH2LKDKILJU')
-client.totp_login(mobilenumber='9137271962', totp=totp.now())
+client.totp_login(mobile_number='9137271962', totp=totp.now())
 
 st.markdown("""
 <style>
