@@ -3,5 +3,5 @@ streamlit
 pandas
 numpy
 yfinance
-kotakneoapi
+neo-api-client
 pyotp
