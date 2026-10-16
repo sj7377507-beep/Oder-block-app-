@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import yfinance as yf
-from neo\_api\_cloent import NeoAPI\
+from neo\_api\_client import NeoAPI\
 client = NeoAPI(consumer_key='46ddfba8-10b2-40dc-8afd-ee0cd878f2ed')
 totp = pyotp.TOTP('OZFVKWQESGPK6IRRH2LKDKILJU')
 client.login(password='986742', totp_pin=totp.now())
