@@ -188,13 +188,11 @@ elif page == "⚡ Instant Move":
 
         st.markdown(f"<h3 style='color:#00ff7f; font-size:16px;'>🔥 TOP 20 BIGGEST PRICE MOVERS</h3>", unsafe_allow_html=True)
         
-        # Displaying in a clean grid/columns layout
         cols = st.columns(2)
         for idx, row in top_instant_moves.reset_index().iterrows():
             col_target = cols[idx % 2]
             with col_target:
                 move_icon = "🚀" if row['P_Change'] > 0 else "💥"
-                color_style = "#00ff7f" if row['P_Change'] > 0 else "#ff3366"
                 sign_str = "+" if row['P_Change'] > 0 else ""
                 if st.button(f"{move_icon} {row['Symbol']} | ₹{row['LTP']} ({sign_str}{row['P_Change']}%) | Vol: {row['Volume_Str']}", key=f"instant_move_{row['Symbol']}"):
                     st.session_state.selected_stock = row['Symbol']
